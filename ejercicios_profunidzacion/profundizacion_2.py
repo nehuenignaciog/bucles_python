@@ -59,7 +59,7 @@ while operador_invalido:
         print ("\n- División (/): ", numero_1 / numero_2)
     elif operador == '**':
         print ("\n- Exponente/Potencia (*): ", numero_1 ** numero_2)
-    elif operador == "FIN":
+    elif operador == "FIN":  # Finalizo el programa
         operador_invalido = False
     else:
         print ("Operador inválido.")
