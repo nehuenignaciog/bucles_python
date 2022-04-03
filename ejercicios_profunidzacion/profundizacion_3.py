@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -50,27 +50,36 @@ cantidad_ausentes = 0   # Aquí debe contar cuantos ausentes hubo
 # y cacular la sumatoria
 
 for nota in notas:
-    
     if nota >= 0:
         sumatoria += nota
         cantidad_notas += 1
-
-    else: 
+    else:
         cantidad_ausentes += 1
-
-
-
 
 # Terminado el bucle calcule el promedio como
 # promedio = sumatoria / cantidad_notas
 
 promedio = sumatoria / cantidad_notas
 
-print ("Promedio: ", promedio)
-print ("Cantidad ausentes", cantidad_ausentes)
-
+print ("Promedio de notas:", promedio)
 
 # Utilice la nota promedio calculada y transformela
 # a calificación con letras, imprima en pantalla el resultado
 
+if (promedio >= 60):
+    if (promedio >= 90):
+        calificacion = "A"
+    elif (promedio >= 80):
+        calificacion = "B"
+    elif (promedio >= 70):
+        calificacion = "C"
+    else:
+        calificacion = "D"
+else:
+    calificacion = "F"
+
+print("Calificación del promedio:", calificacion)
+
 # Imprima en pantalla al cantidad de ausentes
+
+print ("Cantidad ausentes:", cantidad_ausentes)
