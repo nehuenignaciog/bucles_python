@@ -22,6 +22,12 @@ sumatoria = 0  # Inicializo el contador en 0
 
 # for ... in range(....)
 
+for i in range(inicio,fin + 1,+1):
+#   print ("Secuencia:", i) #Verifico secuencia.
+    sumatoria += i
+
 # Imprimir el valor de la sumatoria
+
+print ("Sumatoria: ", sumatoria)
 
 print("terminamos!")
