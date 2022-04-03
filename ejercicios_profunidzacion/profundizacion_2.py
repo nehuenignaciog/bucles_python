@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -35,3 +35,31 @@ alguno de lo soportados o no es la palabra "FIN".
 
 print("Mi Calculadora (^_^)")
 # Empezar aquí la resolución del ejercicio
+
+numero_1 = float(input("Ingrese el primer número\n"))
+numero_2 = float(input("Ingrese el primer número\n"))
+
+# Muestro menú de operaciones válidas
+
+operador_invalido = True
+
+while operador_invalido:
+
+    print ("\nPor favor ingrese operación deseada:\n")
+    print ("- Suma (+)\n- Resta (-)\n- Multiplicación (*)\n- División (/)\n- Exponente/Potencia (**)\n")
+    print ("(Ingrese palabra FIN para salir.)")
+    operador = str(input())
+    if operador == '+':
+        print ("\n- Suma (+)= ", numero_1 + numero_2)
+    elif operador == '-':
+        print ("\n- Resta (-)= ", numero_1 - numero_2)
+    elif operador == '*':
+        print ("\n- Multiplicación (*)= ", numero_1 * numero_2)
+    elif operador == '/':
+        print ("\n- División (/): ", numero_1 / numero_2)
+    elif operador == '**':
+        print ("\n- Exponente/Potencia (*): ", numero_1 ** numero_2)
+    elif operador == "FIN":
+        operador_invalido = False
+    else:
+        print ("Operador inválido.")
