@@ -51,17 +51,50 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 # Colocar el bucle aqui......
 
+for temperatura in temp_dataloger:
+    temperatura_sumatoria += temperatura
+    if temperatura_max == None or temperatura > temperatura_max:
+        temperatura_max = temperatura
+    elif temperatura_min == None or temperatura < temperatura_min:
+        temperatura_min = temperatura
+
+
+
 # Al finalizar el bucle compare si el valor que usted calculó para
 # temperatura_max y temperatura_min coincide con el que podría calcular
 # usando la función "max" y la función "min" de python
 # función "max" --> https://www.w3schools.com/python/ref_func_max.asp
 # función "min" --> https://www.w3schools.com/python/ref_func_min.asp
 
+
+print ("Temperatura maxima (calculada)", temperatura_max)
+print ("Temperatura maxima (función)", max(temp_dataloger))
+
+
+
+print ("Temperatura minima (calculada)", temperatura_min)
+print ("Temperatura minima (función)", min(temp_dataloger))
+
+
+
 # Al finalizar el bucle debe calcular el promedio como:
 # temperatura_promedio = temperatura_sumatoria / cantidad_temperatuas
 
+temperatura_len = len(temp_dataloger)
+
+temperatura_promedio = temperatura_sumatoria / temperatura_len
+
+print ("Temperatura Promedio (Calculada)", temperatura_promedio)
+
+
 # Corroboren los resultados de temperatura_sumatoria
 # usando la función "sum"
+
+print ("Suma Temperaturas (calculada)", temperatura_sumatoria)
+
+print ("Suma Temperaturas (función)", sum(temp_dataloger))
+
+
 # función "sum" --> https://www.w3schools.com/python/ref_func_sum.asp
 
 '''
@@ -79,7 +112,20 @@ Referencia:
 https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-durante-todo-el-a%C3%B1o
 '''
 
+
 # En base a los rangos de temperatura de cada estación,
 # ¿En qué época del año nos encontramos?
+
+if temperatura_min >= 8 and temperatura_max <= 14:
+    epoca = "Invierno"
+elif temperatura_min >= 11 and temperatura_max <=20:
+    epoca = "Otoño"
+elif temperatura_min >= 10 and temperatura_max <= 24 : 
+    epoca= "Privamera"
+else:
+    epoca = "Verano"
+
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
+
+print ("Epoca del año: ", epoca)
