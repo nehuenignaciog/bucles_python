@@ -53,9 +53,9 @@ temperatura_len = 0         # Aquí debe almacenar cuantas temperatuas hay en la
 
 for temperatura in temp_dataloger:
     temperatura_sumatoria += temperatura
-    if temperatura_max == None or temperatura > temperatura_max:
+    if temperatura_max is None or temperatura > temperatura_max:
         temperatura_max = temperatura
-    elif temperatura_min == None or temperatura < temperatura_min:
+    elif temperatura_min is None or temperatura < temperatura_min:
         temperatura_min = temperatura
 
 
@@ -118,12 +118,14 @@ https://es.weatherspark.com/y/28981/Clima-promedio-en-Buenos-Aires-Argentina-dur
 
 if temperatura_min >= 8 and temperatura_max <= 14:
     epoca = "Invierno"
-elif temperatura_min >= 11 and temperatura_max <=20:
+elif temperatura_min >= 19 and temperatura_max <= 28:
+    epoca = "Verano"
+elif temperatura_min >= 11 and temperatura_max <= 20:
     epoca = "Otoño"
-elif temperatura_min >= 10 and temperatura_max <= 24 : 
+elif temperatura_min >= 10 and temperatura_max <= 24:
     epoca= "Privamera"
 else:
-    epoca = "Verano"
+    epoca = "Revisar Datos"
 
 # Imprima el resultado en pantalla
 # Debe utilizar temperatura_max y temperatura_min para definirlo
